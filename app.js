@@ -40,7 +40,7 @@ app.post('/signup', async (req, res) => {
       email,
       password: hashedPassword, // Store the hashed password
     });
-    res.redirect('/weather.html'); // Redirect to weather page on successful signup
+    res.redirect('/'); // Redirect to login page on successful signup
   } catch (error) {
     console.error('Error adding document: ', error);
     res.send('Error registering user');
@@ -99,3 +99,4 @@ app.get('/weather.html', (req, res) => {
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
